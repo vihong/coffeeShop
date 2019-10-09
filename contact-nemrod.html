@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style-all.css">
+    <link rel="stylesheet" href="css/style-contact.css">
+    <title>NEMROD | COFFEE & BAR</title>
+    <link rel="icon" type="image/png" href="./img-nemrod/logo.png">
+</head>
+
+<body>
+    <header class="header" id="header">
+
+        <!-- NAV BAR -->
+        <div class="header_bar">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#monMenu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./img-nemrod/logo.png" alt="logo-nemrod" class="logo-nemrod">
+                        </a>
+                        <a class="navbar-brand logo-nemrod-text" href="index.html"><span>Nemrod</span> | Coffee &
+                            Bar</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="monMenu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="concept-nemrod.html">Concept</a></li>
+                            <li><a href="menu-nemrod.html">Menu</a></li>
+                            <li><a href="ambiance-nemrod.html">Ambiance</a></li>
+                            <li><a href="staff-nemrod.html">Staff</a></li>
+                            <li><a href="contact-nemrod.html">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="main" style="border: 1px black solid; padding-top: 3em;
+    text-align: center;
+    color: color(primary);
+    font-size: 3rem;">
+
+        <div class="container page_title">
+            <h1>contact</h1>
+            <hr>
+        </div>
+
+    </main>
+
+    <div class="container" style="padding-bottom : 30px">
+        <div class="row">
+            <div class="container header_text col-md-6">
+                <img src="./img-nemrod/pic-17.png">
+                <img class="phone" style="width: 20%; height: auto; position: relative; left: 40%;"
+                    src="./img-nemrod/phone-icon.png" alt="">
+            </div>
+
+            <!-- FORMULAIRE -->
+            <form class="container form col-md-6">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name_contact" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Téléphone</label>
+                    <input type="tel" name="phone_contact" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="email" name="email_contact" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message</label>
+                    </textarea><textarea name="message_contact" id="message" cols="30" rows="3" class="form-control">
+            </textarea>
+
+                </div>
+                <!-- MODAL DU FORMULAIRE-->
+                <button type="button" class="btn btn-warning" data-toggle="modal"
+                    data-target="#myModal">Envoyer</button>
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Votre message a bien été envoyé</h4>
+                                <!-- You can also add a SweetAlert e-pluggin -->
+                                <button type="button" class="close" data-dismiss="modal">;)</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Nous consultons notre boite email tous les jours. À très vite !</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-warning">x</button>
+                                Fermer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- END OF FORMULAIRE -->
+
+    <!-- GOOGLE MAP API -->
+
+    <map name="addresse">
+        <!-- aucune idée si cette tag est pertinente ou pas  -->
+    </map>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#header">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <div class="container">
+            <div>
+                <a href="#">
+                    <img class="icon" src="./img-nemrod/fb-logo.png" alt="fb-logo"></a>
+                <a href="#">
+                    <img class="icon" src="./img-nemrod/ig-logo.png" alt="ig-logo"></a>
+                <a href="#">
+                    <img class="icon" src="./img-nemrod/sc-logo.png" alt="sc-logo"></a>
+            </div>
+
+            <div class="opening_hours">
+                <h2>Nemrod Coffee & Bar, ouvert 7j/7</h2>
+                <p>lun - ven : 06h00 - 22h00<br>sam - dim : 08h00 - 22h00</p>
+            </div>
+
+            <div class="copyrights">
+                <p>Nemrod (by Vi Hong) &copy; 2019 </p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+
+
+</html>

@@ -1,0 +1,27 @@
+/* PALETTE */
+.form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  color: grey;
+}
+
+.header_text .phone {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+  .header_text .phone {
+    display: none;
+  }
+}
+
+.contact_block {
+  margin-bottom: 10px auto;
+}
+/*# sourceMappingURL=style-contact.css.map */

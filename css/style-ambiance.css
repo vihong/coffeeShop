@@ -1,0 +1,32 @@
+/* PALETTE */
+.main {
+  padding-top: 3em;
+  text-align: center;
+  color: #deae3c;
+  font-size: 3rem;
+}
+
+/* CONCEPT BLOCKS */
+.ambiance .ambiance_unit {
+  margin: 2em auto;
+}
+
+@media (min-width: 768px) {
+  .ambiance .ambiance_unit hr {
+    display: none;
+  }
+}
+
+.ambiance .ambiance_unit h2 {
+  margin-bottom: 30px;
+}
+
+.ambiance .ambiance_unit .img_ambiance {
+  padding: 0 15px 15px;
+}
+
+.ambiance .ambiance_unit .img_ambiance:hover {
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+}
+/*# sourceMappingURL=style-ambiance.css.map */

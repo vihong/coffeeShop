@@ -1,0 +1,75 @@
+// ---------------------------------------------------------------- //
+
+/* PALETTE */
+
+$colors: (
+  primary: #deae3c,
+  secondary: rgb(31, 189, 31)
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+.main {
+  // background-color: lightgrey; //à annuler
+  padding-top: 3em;
+  text-align: center;
+  color: color(primary);
+  font-size: 3rem;
+}
+
+/* CONCEPT BLOCKS */
+
+.ambiance {
+  .ambiance_unit {
+    margin: 2em auto;
+    @include ipadResp {
+      hr {
+        display: none;
+      }
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .img_ambiance {
+      padding: 0 15px 15px;
+    }
+    .img_ambiance:hover {
+      filter: opacity(80%);
+    }
+  }
+}
+
+//responsive avec flexbox
+// display: flex;
+// flex-direction: row;
+// align-items: center;
+

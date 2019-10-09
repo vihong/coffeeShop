@@ -1,0 +1,114 @@
+/* GLOBAL */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+/* HEADER */
+.header .header_bar .logo-nemrod {
+  height: 30px;
+  width: auto;
+  padding: 0;
+  position: relative;
+  bottom: 5px;
+}
+
+.header .header_bar .logo-nemrod-text {
+  padding-left: 4px;
+}
+
+@media (min-width: 768px) {
+  .header .header_bar .logo-nemrod-text {
+    padding-left: 15px;
+    font-size: 1.3em;
+  }
+}
+
+.header .header_bar span {
+  color: #deae3c;
+}
+
+@media (min-width: 768px) {
+  .header .header_bar div ul {
+    font-size: 1.3em;
+  }
+}
+
+.header .header_bar .navbar-collapse {
+  text-align: center;
+}
+
+.header .header_bar .navbar-collapse ul li a:hover {
+  color: #fff;
+}
+
+/* PAGE TITLE */
+.page_title h1 {
+  text-transform: uppercase;
+  color: #deae3c;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.footer .icon {
+  width: 25%;
+  height: auto;
+  margin: 20px 10px;
+}
+
+@media (min-width: 768px) {
+  .footer .icon {
+    width: 10%;
+  }
+}
+
+.footer .glyphicon {
+  font-size: 25px;
+  margin: 20px;
+  color: #deae3c;
+  height: 30px;
+}
+
+.footer .glyphicon:hover {
+  font-size: 33px;
+}
+
+.opening_hours h2 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.copyrights {
+  margin: 20px auto;
+}
+/*# sourceMappingURL=style-all.css.map */

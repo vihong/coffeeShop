@@ -1,0 +1,158 @@
+/* GLOBAL */
+html,
+body {
+  background-color: lightgrey;
+}
+
+/* HEADER */
+.header {
+  background-image: url(../img-nemrod/female-coffee.jpg);
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  height: 100vh;
+  padding: 10px;
+  text-align: center;
+}
+
+.header .header_text p {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 2em;
+  font-style: italic;
+  margin-top: 3em;
+}
+
+@media (min-width: 768px) {
+  .header .header_text p {
+    font-size: 3em;
+    position: relative;
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .header_text p {
+    font-size: 3em;
+    position: relative;
+    bottom: 60px;
+  }
+  .header .header_text p br {
+    display: none;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header .header_text p {
+    font-size: 4em;
+    position: relative;
+    bottom: 60px;
+  }
+  .header .header_text p br {
+    display: none;
+  }
+}
+
+.header .header_text a {
+  border: 1px solid #deae3c;
+  color: #deae3c;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+@media (min-width: 768px) {
+  .header .header_text a {
+    font-size: 1.3em;
+    position: relative;
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .header_text a {
+    bottom: 55px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header .header_text a {
+    font-size: 1.7em;
+    position: relative;
+    bottom: 50px;
+  }
+}
+
+/* BOXES */
+.boxes {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .boxes {
+    padding: 15px;
+  }
+}
+
+.boxes .box {
+  background-color: lightgrey;
+  padding: 12px;
+}
+
+.boxes .box a img:hover {
+  -webkit-filter: opacity(90%);
+          filter: opacity(90%);
+}
+
+.boxes .box .textInTheBox {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .boxes .box .textInTheBox {
+    font-size: 2.8rem;
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
+[class*="reveal-"] {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@media (min-width: 1024px) {
+  .reveal-2 {
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+  }
+  .reveal-3 {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .reveal-5 {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+}
+/*# sourceMappingURL=style-index.css.map */

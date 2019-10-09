@@ -1,0 +1,99 @@
+/* PALETTE */
+.main {
+  padding-top: 3em;
+  text-align: center;
+  color: #deae3c;
+  font-size: 3rem;
+}
+
+/* CONCEPT BLOCKS */
+.staff {
+  margin: 1em auto;
+}
+
+@media (min-width: 1024px) {
+  .staff .staff_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.staff .staff_block .staff_text {
+  margin-top: 30px;
+  padding-bottom: 2em;
+}
+
+.staff .staff_block .staff_text h2 {
+  font-weight: 400;
+  text-align: left;
+}
+
+.staff .staff_block .staff_text p {
+  color: lightgrey;
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 20px;
+}
+
+[class*="reveal-"] {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@media (min-width: 768px) {
+  .reveal-2 {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  .reveal-3 {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .reveal-5 {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reveal-2 {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  .reveal-3 {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .reveal-4 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .reveal-5 {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+}
+/*# sourceMappingURL=style-staff.css.map */

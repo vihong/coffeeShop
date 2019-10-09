@@ -1,0 +1,132 @@
+// ---------------------------------------------------------------- //
+
+/* PALETTE */
+
+$colors: (
+  primary: #deae3c,
+  secondary : rgb(31, 189, 31)
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+.main {
+  // background-color: lightgrey; //à annuler
+  padding-top: 3em;
+  text-align: center;
+  color: color(primary);
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+}
+
+/* BOXES */
+.categ {
+    // background-color: lightgreen;
+    position: relative;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 2em;
+    // background-color: lightgrey;
+    // border: 1px solid yellow;
+    @include desktopResp {
+      padding: 15px;
+    }
+    h2 {
+      color: color(primary);
+      @include ipadResp{
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      @include desktopResp{
+        font-size: 1em;
+      }
+    }
+    @include desktopResp {
+      hr {
+        display: none;
+      }
+    }
+    .box {
+      // background-color: white;
+      padding: $padding-img;
+      a img:hover {
+        filter: opacity(90%);
+      }
+      .textInTheBox {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        font-size: 1.9rem;
+  
+        @include ipadResp {
+          font-size: 2rem;
+          bottom: 10%;
+          left: 10%;
+        @include desktopResp{
+          font-size: 1.7rem;
+        }
+        @include screenResp{
+          font-size: 2.2rem;
+        }
+        }
+      }
+    }
+  }
+
+
+  [class*="reveal-"] {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+  }
+  
+  @include desktopResp {
+    .reveal-2 {
+      transition-delay: 0.15s;
+    }
+  
+    .reveal-3 {
+      transition-delay: 0.2s;
+    }
+  
+    .reveal-4 {
+      transition-delay: 0.3s;
+    }
+  
+    .reveal-5 {
+      transition-delay: 0.4s;
+    }
+  }

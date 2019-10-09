@@ -1,0 +1,201 @@
+//---------------------  PALETTE  ---------------------//
+$colors: (
+  primary: #deae3c
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin responsive($media) {
+  //----------------- Apple devices -----------------//
+  @if $media == iphoneSE {
+    @media (min-width: 320px) /*and (min-height: 568px) */ {
+      @content;
+    }
+  } @else if $media == iphone6 {
+    @media (min-width: 375px) /*and (min-height: 667px) */ {
+      @content;
+    }
+  } @else if $media == iphone6plus {
+    @media (min-width: 414px) /*and (min-height: 736px) */ {
+      @content;
+    }
+  } @else if $media == iphoneX {
+    @media (min-width: 375px) and (min-height: 812px) {
+      @content;
+    }
+  } @else if $media == iPad {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  //----------------- Android devices -----------------//
+  @else if $media == galaxyS5 {
+    @media (min-width: 350px) and (min-height: 640px) {
+      @content;
+    }
+
+    //----------------- Other devices -----------------//
+
+  } @else if $media == desktop {
+    @media (min-width: 968px) {
+      @content;
+    }
+  } @else if $media == tvScreen {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+  // @else if $media == ios {
+  //   @media (min-width: 768px) and (min-height: 1024px) { @content; }
+  //   @media (min-width: 320px) and (min-height: 480px) { @content; }
+  // }
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+/* HEADER */
+.header {
+  // NAV BAR
+
+  .header_bar {
+    .logo-nemrod {
+      height: 30px;
+      width: auto;
+      padding: 0;
+      position: relative;
+      bottom: 5px;
+    }
+    .logo-nemrod-text {
+      padding-left: 4px;
+
+      @include ipadResp {
+        padding-left: 15px;
+        font-size: 1.3em;
+      }
+    }
+    span {
+      color: color(primary);
+    }
+
+    @include ipadResp {
+      div ul {
+        font-size: 1.3em;
+      }
+    }
+    .navbar-collapse {
+      text-align: center;
+      ul li a:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* PAGE TITLE */
+.page_title {
+  h1 {
+    text-transform: uppercase;
+    color: color(primary);
+    text-align: center; 
+  }
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  .icon {
+    width: 25%;
+    height: auto;
+    margin: 20px 10px;
+
+    @include responsive(iPad) {
+      width: 10%;
+    }
+  }
+  .glyphicon {
+    font-size: 25px;
+    margin: 20px;
+    color: color(primary);
+    height: 30px; //retire ça et tu verras pourquoi c'est important de le mettre
+  }
+  .glyphicon:hover {
+    font-size: 33px;
+  }
+}
+.opening_hours {
+  h2 {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+}
+.copyrights {
+  margin: 20px auto;
+}
+
+
+/* ANIMATIONS */
+
+[class*="reveal-"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@include desktopResp {
+  .reveal-2 {
+    transition-delay: 0.15s;
+  }
+
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-4 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-5 {
+    transition-delay: 0.4s;
+  }
+}

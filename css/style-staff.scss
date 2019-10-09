@@ -1,0 +1,130 @@
+// ---------------------------------------------------------------- //
+
+/* PALETTE */
+
+$colors: (
+  primary: #deae3c
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+.main {
+  //   background-color: lightgrey;
+  padding-top: 3em;
+  text-align: center;
+  color: color(primary);
+  font-size: 3rem;
+}
+
+/* CONCEPT BLOCKS */
+
+.staff {
+    margin: 1em auto;
+    .staff_block {
+    @include desktopResp {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+    .staff_text {
+      margin-top: 30px;
+      h2 {
+        font-weight: 400;
+        text-align: left;
+
+      }
+      p {
+        color: lightgrey;
+        font-size: 2rem;
+        // font-style: italic;
+        text-align: left;
+        margin-top: 20px;
+      }
+      padding-bottom: 2em;
+    }
+  }
+}
+
+//responsive avec flexbox
+// display: flex;
+// flex-direction: row;
+// align-items: center;
+
+
+[class*="reveal-"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@include ipadResp {
+  .reveal-2 {
+    transition-delay: 0.1s;
+  }
+
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-4 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-5 {
+    transition-delay: 0.4s;
+  }
+}
+
+
+@include desktopResp {
+  .reveal-2 {
+    transition-delay: 0.1s;
+  }
+
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-4 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-5 {
+    transition-delay: 0.4s;
+  }
+}

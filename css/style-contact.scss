@@ -1,0 +1,75 @@
+// ---------------------------------------------------------------- //
+
+/* PALETTE */
+
+$colors: (
+  primary: #deae3c
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+// html, body { background-color: pink;}
+
+
+// FORMULAIRE
+
+.form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  color: grey;
+}
+
+//for some reason this one 
+// main .pokemon {
+  // padding-top: 3em;
+  // text-align: center;
+  // color: color(primary);
+  // font-size: 3rem;
+// }
+
+.header_text{
+  .phone {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    margin: 20px auto;
+    @include ipadResp {
+      display: none;
+    }
+  }
+}
+
+.contact_block {
+  margin-bottom: 10px auto;
+}

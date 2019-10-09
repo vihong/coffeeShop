@@ -1,0 +1,113 @@
+// ---------------------------------------------------------------- //
+
+/* PALETTE */
+
+$colors: (
+  primary: #deae3c
+);
+
+$padding-img: 12px; //why not give percentage but pixels ?
+$borders: 15px;
+$margin: 25px;
+$ipad: 768px;
+$desktop: 1024px;
+$screen: 1300px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@mixin ipadResp {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+@mixin desktopResp {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin screenResp {
+  @media (min-width: #{$screen}) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+
+
+.main {
+  //   background-color: lightgrey;
+  padding-top: 3em;
+  text-align: center;
+  color: color(primary);
+  font-size: 3rem;
+}
+
+/* PAGE TITLE */
+.page_title {
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+/* CONCEPT BLOCKS */
+
+.concept {
+  margin: 2em auto;
+  .concept_block {
+    img {
+      margin: 1em auto;
+    }
+    h2 {
+      font-weight: 400;
+    }
+    p {
+      color: lightgrey;
+      font-size: 2rem;
+    //   font-weight: 320;
+      font-style: italic;
+    }
+    a {
+        margin-top: 2rem;
+    }
+    padding-bottom: 2em;
+    @include desktopResp{
+        hr {
+            display: none;
+        }
+    }
+  }
+}
+
+
+[class*="reveal-"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.4s cubic-bezier(0.59, 0, 0.02, 0.99);
+}
+
+@include desktopResp {
+  .reveal-2 {
+    transition-delay: 0.15s;
+  }
+
+  .reveal-3 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-4 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-5 {
+    transition-delay: 0.4s;
+  }
+}
